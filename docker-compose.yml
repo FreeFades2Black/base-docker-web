@@ -1,12 +1,14 @@
-version: '3.8'
-
 services:
   web:
     build: .
     ports:
       - "8080:80"
+    volumes:
+      - .:/app
     depends_on:
       - db
+    environment:
+      - FLASK_APP=app.py
 
   db:
     image: postgres:15-alpine
