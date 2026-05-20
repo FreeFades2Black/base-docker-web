@@ -1,0 +1,19 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: devops_user
+      POSTGRES_PASSWORD: supersecretpassword
+      POSTGRES_DB: app_production
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
