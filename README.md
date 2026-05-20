@@ -4,11 +4,12 @@ A local, production-grade DevOps sandbox environment built entirely inside nativ
 
 ## 🏗️ Architectural Evolution
 
-The project was developed across three distinct engineering milestones to demonstrate core containerization and lifecycle automation concepts:
+The project was developed across four distinct engineering milestones to demonstrate core containerization and lifecycle automation concepts:
 
 1. **Bare-Metal Containerization (Docker Engine):** Deployed a custom static Nginx web server using native Linux daemons (`docker-ce`), isolating web traffic to container ports.
-2. **Infrastructure as Code (Terraform):** Shifted infrastructure management from imperative CLI commands to declarative configuration scripts (`main.tf`), programmatically handling the container runtime state.
-3. **Continuous Integration (GitHub Actions):** Implemented an automated cloud pipeline to catch syntax errors, dead layers, or security vulnerabilities in container blueprints prior to deployment.
+2. **Multi-Container Orchestration (Docker Compose):** Scaled our local environment from a single web node to a multi-tier architecture using Docker Compose to orchestrate dependencies.
+3. **Infrastructure as Code (Terraform):** Shifted infrastructure management from imperative CLI commands to declarative configuration scripts (`main.tf`), programmatically handling the container runtime state.
+4. **Continuous Integration (GitHub Actions):** Implemented an automated cloud pipeline to catch syntax errors, dead layers, or security vulnerabilities in container blueprints prior to deployment.
 
 ---
 
@@ -28,6 +29,4 @@ Set up the application layer and map inbound host traffic down to the virtualize
        <p>Built natively inside WSL 2 Ubuntu.</p>
    </body>
    </html>
-   EOF# 
-
-
+   EOF
