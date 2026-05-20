@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Docker Web Project</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            border: 2px solid #00ffcc;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+        }
+        h1 { color: #00ffcc; margin-bottom: 10px; }
+        p { color: #aaaaaa; font-size: 1.1rem; }
+        .status { color: #2ecc71; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Docker Engine Container Live</h1>
+        <p>This project was built entirely inside native <strong>WSL 2 Ubuntu</strong> and deployed via Docker CLI.</p>
+        <p>Status: <span class="status">● Running Seamlessly</span></p>
+    </div>
+</body>
+</html>
