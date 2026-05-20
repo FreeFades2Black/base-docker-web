@@ -2,36 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base Docker Web Project</title>
+    <title>William Free Hall's Dashboard</title>
     <style>
         body {
-            background-color: #121212;
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Segoe UI', sans-serif;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
             margin: 0;
         }
         .container {
-            text-align: center;
-            border: 2px solid #00ffcc;
+            border: 2px solid #58a6ff;
             padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(88, 166, 255, 0.4);
+            text-align: center;
         }
-        h1 { color: #00ffcc; margin-bottom: 10px; }
-        p { color: #aaaaaa; font-size: 1.1rem; }
-        .status { color: #2ecc71; font-weight: bold; }
+        h1 { color: #58a6ff; margin-bottom: 10px; }
+        .name { color: #ffffff; font-weight: bold; font-size: 1.5em; }
+        code { background: #161b22; padding: 5px; border-radius: 5px; color: #ffa657; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Docker Engine Container Live</h1>
-        <p>This project was built entirely inside native <strong>WSL 2 Ubuntu</strong> and deployed via Docker CLI.</p>
-        <p>Status: <span class="status">● Running Seamlessly</span></p>
+        <h1>Infrastructure Operational</h1>
+        <p>Welcome, <span class="name">William Free Hall</span></p>
+        <p>Your multi-tier stack is active.</p>
+        <p>Database Status: <code>Connected & Pingable</code></p>
     </div>
 </body>
 </html>
