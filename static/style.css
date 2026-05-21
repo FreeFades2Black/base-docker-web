@@ -1,3 +1,106 @@
-body { background: #0d1117; color: #c9d1d9; font-family: sans-serif; display: grid; place-items: center; height: 100vh; margin: 0; }
-.card { border: 1px solid #30363d; padding: 2rem; border-radius: 12px; text-align: center; background: #161b22; }
-h2 { color: #58a6ff; font-size: 3rem; margin: 0; }
+/* Full Page Base Configuration */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #c9d1d9;
+    
+    /* Custom Background Image Handling */
+    background-image: url('/static/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    /* Center the layout card on the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main UI Display Card (Semi-transparent dark theme) */
+.card {
+    background-color: rgba(22, 27, 34, 0.95);
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 2.5rem;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Typography & Headings */
+h1 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+h3 {
+    color: #8b949e;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 0.5rem;
+}
+
+/* Hit Counter Styles */
+.counter {
+    background-color: #0d1117;
+    border: 1px solid #21262d;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.counter p {
+    margin: 0;
+    color: #8b949e;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.counter h2 {
+    margin: 0.5rem 0 0 0;
+    font-size: 3rem;
+    color: #58a6ff;
+}
+
+/* Relational Traffic Stream List */
+.log-section {
+    text-align: left;
+}
+
+.log-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.log-section li {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Colored Highlight Elements */
+.log-section li strong {
+    color: #ff7b72; /* Color for the Guest nickname */
+}
+
+.log-section li span {
+    color: #58a6ff; /* Color for the referral source text */
+    font-weight: 600;
+}
