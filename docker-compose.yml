@@ -18,5 +18,12 @@ services:
     environment:
       POSTGRES_PASSWORD: password
 
+  tunnel:
+    image: cloudflare/cloudflared:latest
+    restart: always
+    command: tunnel --url http://web:80
+    depends_on:
+      - web
+
 volumes:
   pgdata:

@@ -2,23 +2,29 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>William's Dashboard</title>
+    <title>Free's Dashboard</title>
 </head>
 <body>
     <div class="card">
-        <h1>Welcome, William Free Hall</h1>
+        <h1>Welcome to William Free Hall's Realm</h1>
+        
         <div class="counter">
-            <p>Visitor Count</p>
+            <p>Total Historical Hits</p>
             <h2>{{ count }}</h2>
+        </div>
+
+        <div class="log-section" style="margin-top: 2rem; text-align: left;">
+            <h3>Real-Time Traffic Stream</h3>
+            <ul style="list-style: none; padding: 0;">
+                {% for log in logs %}
+                    <li style="margin-bottom: 0.5rem; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem;">
+                        <strong>{{ log[1] }}</strong> (IP: {{ log[0] }}) 
+                        came via <span style="color: #58a6ff;">{{ log[2] }}</span> 
+                        at {{ log[3].strftime('%H:%M:%S') }}
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </body>
 </html>
-<div class="log-section">
-    <h3>Recent Visitors</h3>
-    <ul>
-        {% for log in logs %}
-            <li>IP: {{ log[0] }} at {{ log[1].strftime('%H:%M:%S') }}</li>
-        {% endfor %}
-    </ul>
-</div>
