@@ -1,0 +1,115 @@
+/* General Page Layout Reset */
+body {
+    background-image: url('/static/background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #121212; /* Fallback deep dark tone */
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Central Realm Dashboard Card Layout */
+.container {
+    background: rgba(18, 18, 18, 0.85); /* Smooth translucent dark backing */
+    backdrop-filter: blur(10px); /* Modern frosted-glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+/* Typography Styling */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #a0aec0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Hit Counter Panel */
+.counter-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.counter-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #718096;
+    margin-bottom: 0.5rem;
+}
+
+.counter-number {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #63b3ed; /* Classic deep blue hit glow */
+    line-height: 1;
+}
+
+/* Traffic Log Streams */
+.traffic-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.traffic-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+}
+
+.guest-badge {
+    color: #fc8181; /* Highlighting guest interactions */
+    font-weight: 600;
+}
+
+.ip-address {
+    color: #a0aec0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.referral-link {
+    color: #4299e1;
+    text-decoration: none;
+}
+
+.referral-link:hover {
+    text-decoration: underline;
+}
+
+.timestamp {
+    color: #718096;
+}
